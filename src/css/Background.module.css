@@ -1,0 +1,22 @@
+.article {
+  padding-top: 310px;
+  padding-bottom: 220px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+.header {
+  font-size: 80px;
+  color: #60605d;
+  text-align: center;
+}
+
+.searchby {
+  font-size: 60px;
+  color: #60605d;
+  text-align: center;
+}

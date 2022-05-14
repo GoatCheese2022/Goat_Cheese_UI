@@ -8,10 +8,10 @@ import { appColor, headerHeight, spacer } from 'modules/theme';
 import { logOut } from 'actions';
 
 import Icon from 'components/Icon';
-import Logo from 'components/Logo';
+// import Logo from 'components/Logo';
 
 const HeaderWrapper = styled.header`
-  background-color: #113740;
+  background-color: #b91d1d;
   height: ${headerHeight}px;
   left: 0;
   position: fixed;
@@ -35,19 +35,19 @@ const HeaderContainer = styled(Container)`
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  justify-content: space-between;
-  padding-bottom: ${spacer(2)};
-  padding-top: ${spacer(2)};
+  justify-content: flex-end;
+  padding-bottom: ${spacer(1)};
+  padding-top: ${spacer(1)};
 `;
 
 const Logout = styled.button`
   align-items: center;
   color: #fff;
   display: flex;
-  font-size: 1.3rem;
-  padding: ${spacer(2)};
+  font-size: 1.0rem;
+  padding: ${spacer(0.2)};
 
-  ${responsive({ lg: { fontSize: '1.6rem' } })}; /* stylelint-disable-line */
+  ${responsive({ lg: { fontSize: '1.5rem' } })}; /* stylelint-disable-line */
 
   &.active {
     color: #fff;
@@ -56,7 +56,7 @@ const Logout = styled.button`
   span {
     display: inline-block;
     margin-right: 0.4rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 `;
 
@@ -70,7 +70,7 @@ export default function Header() {
   return (
     <HeaderWrapper data-testid="Header">
       <HeaderContainer>
-        <Logo />
+        {/*<Logo />*/}
         <Logout onClick={handleClickLogout}>
           <span>logout</span>
           <Icon name="sign-out" width={16} />
