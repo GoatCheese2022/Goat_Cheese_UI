@@ -5,6 +5,11 @@ declare namespace NodeJS {
   }
 }
 
+declare module '*.mp3' {
+  const src: string;
+  export default src;
+}
+
 declare module '*.bmp' {
   const src: string;
   export default src;
