@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from "components/Icon";
-import {Button, Text} from "styled-minimal";
+import {Button} from "styled-minimal";
 
 interface props {
   url?: string
@@ -12,7 +12,7 @@ const playSound = (url: string | undefined) => {
     audio.play();
   }
   else {
-    console.log("No audio file found. Please record your preferred pronunciation!")
+    alert("No audio file found. Please record your preferred pronunciation!");
   }
 }
 
@@ -22,7 +22,6 @@ export default function SoundButton(props: props) {
       onClick={() => playSound(props.url)}
     >
       <Icon name="bell"/>
-      <Text ml={2}>Click here!</Text>
     </Button>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { Button, Container, responsive, Text } from 'styled-minimal';
+import {Button, Container, Form, Input, Label, responsive, Text} from 'styled-minimal';
 
 import { spacer } from 'modules/theme';
 
@@ -59,6 +59,15 @@ function Home() {
     dispatch(login());
   };
 
+  const handleSubmit = () => (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
+  };
+
   return (
     <Background key="Home" data-testid="Home">
       <Container fullScreen>
@@ -66,17 +75,26 @@ function Home() {
           <Logo />
         </Header>
         <Heading>{name}</Heading>
-        <Button
-          busy={status === STATUS.RUNNING}
-          data-testid="Login"
-          onClick={handleClickLogin}
-          size="xl"
-          textTransform="uppercase"
-          variant="white"
-        >
-          <Icon name="sign-in" />
-          <Text ml={2}>Click here to Continue</Text>
-        </Button>
+        <Form className="loginForm" onSubmit={handleSubmit()}>
+          <Label>
+            Username:
+            <Input type="text" name="username" placeholder="username"/>
+          </Label>
+          <Label>
+            Password:
+            <Input type="password" name="password" placeholder="password" />
+          </Label>
+          <Button
+            busy={status === STATUS.RUNNING}
+            data-testid="Login"
+            onClick={handleClickLogin}
+            textTransform="uppercase"
+            variant="white"
+          >
+            <Icon name="sign-in" />
+            <Text ml={2}>Login</Text>
+          </Button>
+        </Form>
       </Container>
     </Background>
   );
