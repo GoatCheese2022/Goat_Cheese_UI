@@ -28,6 +28,12 @@ export interface ProfileData {
   status: ValueOf<Status>;
 }
 
+export interface AudioData {
+  data: Array<Record<string, any>>;
+  message: string;
+  status: ValueOf<Status>
+}
+
 export interface AlertsState {
   data: AlertData[];
 }
@@ -42,6 +48,10 @@ export interface GitHubState {
 
 export interface ProfileState {
   profiles: Record<string, ProfileData>;
+}
+
+export interface AudioState {
+  audio: Record<string, AudioData>;
 }
 
 export interface UserState {

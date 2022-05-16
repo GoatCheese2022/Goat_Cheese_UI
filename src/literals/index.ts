@@ -18,6 +18,10 @@ export const ActionTypes = keyMirror({
   USER_LOGOUT_REQUEST: undefined,
   USER_LOGOUT_SUCCESS: undefined,
   USER_LOGOUT_FAILURE: undefined,
+  GET_AUDIO_REQUEST: undefined,
+  GET_AUDIO_SUCCESS: undefined,
+  GET_AUDIO_FAILURE: undefined,
+  SAVE_AUDIO_REQUEST: undefined
 });
 
 export const STATUS: Status = {

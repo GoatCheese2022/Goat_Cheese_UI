@@ -1,6 +1,6 @@
 import { STATUS } from 'literals';
 
-import {ProfileData, Topic} from 'types';
+import {AudioData, ProfileData, Topic} from 'types';
 
 export const description = 'Name Pronunciation Tool';
 export const name = 'Hello! And welcome! to Goat Cheese';
@@ -17,3 +17,9 @@ export const profiledata: ProfileData = {
   message: '',
   status: STATUS.IDLE,
 };
+
+export const audiodata: AudioData = {
+  data: [],
+  message: '',
+  status: STATUS.IDLE,
+}

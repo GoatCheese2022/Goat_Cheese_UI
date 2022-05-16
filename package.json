@@ -18,7 +18,10 @@
     "ES6"
   ],
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "@gilbarbara/helpers": "^0.5.1",
+    "@mui/material": "^5.7.0",
     "@reduxjs/toolkit": "^1.8.0",
     "axios": "^0.27.2",
     "immer": "^9.0.12",
