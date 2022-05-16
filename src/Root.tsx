@@ -23,7 +23,7 @@ import PublicRoute from 'components/PublicRoute';
 import SystemAlerts from 'containers/SystemAlerts';
 import Home from 'routes/Home';
 import NotFound from 'routes/NotFound';
-import Private from 'routes/Private';
+import Profile from 'containers/Profile';
 
 import { UserState } from 'types';
 
@@ -50,7 +50,7 @@ function Root() {
 
   useEffect(() => {
     if (changed('isAuthenticated', true)) {
-      dispatch(showAlert('Hello! And welcome! to Goat Cheese', { variant: 'success', icon: 'bell', timeout: 10 }));
+      dispatch(showAlert('welcome!', { variant: 'success', icon: 'bell', timeout: 10 }));
     }
   }, [dispatch, changed]);
 
@@ -76,7 +76,7 @@ function Root() {
             <Routes>
               <Route
                 element={
-                  <PublicRoute isAuthenticated={isAuthenticated} to="/private">
+                  <PublicRoute isAuthenticated={isAuthenticated} to="/profile">
                     <Home />
                   </PublicRoute>
                 }
@@ -85,10 +85,10 @@ function Root() {
               <Route
                 element={
                   <PrivateRoute isAuthenticated={isAuthenticated} to="/">
-                    <Private />
+                    <Profile />
                   </PrivateRoute>
                 }
-                path="/private"
+                path="/profile"
               />
               <Route element={<NotFound />} path="*" />
             </Routes>

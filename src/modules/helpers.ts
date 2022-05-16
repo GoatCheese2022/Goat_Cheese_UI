@@ -4,7 +4,7 @@ import { REHYDRATE } from 'redux-persist';
 
 import { RootState } from 'types';
 
-export function actionPayload<T = any, M = Record<string, string>>(payload: T, meta?: M) {
+export function actionPayload<T = any, M = Record<string, any>>(payload: T, meta?: M) {
   return { payload, meta };
 }
 

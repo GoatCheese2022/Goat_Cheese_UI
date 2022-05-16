@@ -98,7 +98,7 @@ export default function SystemAlerts() {
         if (d.timeout && !current[d.id]) {
           current[d.id] = setTimeout(() => {
             dispatch(hideAlert(d.id));
-          }, d.timeout * 1000);
+          }, d.timeout * 500);
         }
       });
     }

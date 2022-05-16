@@ -12,6 +12,11 @@ export const selectGitHub = createSelector(
   github => github,
 );
 
+export const selectProfile = createSelector(
+  (state: RootState) => state.profile,
+  profile => profile,
+);
+
 export const selectUser = createSelector(
   (state: RootState) => state.user,
   user => user,

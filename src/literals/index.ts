@@ -3,6 +3,9 @@ import { keyMirror } from '@gilbarbara/helpers';
 import { Status } from 'types';
 
 export const ActionTypes = keyMirror({
+  GET_PROFILE_REQUEST: undefined,
+  GET_PROFILE_SUCCESS: undefined,
+  GET_PROFILE_FAILURE: undefined,
   GITHUB_GET_REPOS_REQUEST: undefined,
   GITHUB_GET_REPOS_SUCCESS: undefined,
   GITHUB_GET_REPOS_FAILURE: undefined,

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Private should render properly 1`] = `
+exports[`Profile should render properly 1`] = `
 .c0 {
   box-sizing: border-box;
 }
@@ -254,7 +254,7 @@ exports[`Private should render properly 1`] = `
 
 <div
   class="c0"
-  data-testid="Private"
+  data-testid="Profile"
 >
   <div
     class="c1"

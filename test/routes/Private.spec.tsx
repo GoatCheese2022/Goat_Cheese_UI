@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Private from 'routes/Private';
+import Profile from 'containers/Profile';
 
 import { render, screen } from 'test-utils';
 
-describe('Private', () => {
+describe('Profile', () => {
   it('should render properly', () => {
-    render(<Private />);
+    render(<Profile />);
 
-    expect(screen.getByTestId('Private')).toMatchSnapshot();
+    expect(screen.getByTestId('Profile')).toMatchSnapshot();
   });
 });

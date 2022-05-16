@@ -22,6 +22,12 @@ export interface Topic {
   updatedAt: number;
 }
 
+export interface ProfileData {
+  data: Array<Record<string, any>>;
+  message: string;
+  status: ValueOf<Status>;
+}
+
 export interface AlertsState {
   data: AlertData[];
 }
@@ -34,6 +40,10 @@ export interface GitHubState {
   topics: Record<string, Topic>;
 }
 
+export interface ProfileState {
+  profiles: Record<string, ProfileData>;
+}
+
 export interface UserState {
   isAuthenticated: boolean;
   status: ValueOf<Status>;
@@ -43,6 +53,7 @@ export interface RootState {
   alerts: AlertsState;
   app: AppState;
   github: GitHubState;
+  profile: ProfileState;
   user: UserState;
 }
 

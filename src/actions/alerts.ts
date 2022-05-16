@@ -13,7 +13,8 @@ export const hideAlert = createAction<string>(ActionTypes.HIDE_ALERT);
 export const showAlert = createAction(
   ActionTypes.SHOW_ALERT,
   (message: React.ReactNode, options: ShowAlertOptions) => {
-    const timeout = options.variant === 'danger' ? 0 : 5;
+    // const timeout = options.variant === 'danger' ? 0 : 5;
+    const timeout = 3;
 
     return actionPayload({
       id: options.id || uuid(),

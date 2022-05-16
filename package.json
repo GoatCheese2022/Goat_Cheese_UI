@@ -20,6 +20,7 @@
   "dependencies": {
     "@gilbarbara/helpers": "^0.5.1",
     "@reduxjs/toolkit": "^1.8.0",
+    "axios": "^0.27.2",
     "immer": "^9.0.12",
     "is-lite": "^0.8.1",
     "react": "^16.8.0",
@@ -27,7 +28,7 @@
     "react-error-boundary": "^3.1.4",
     "react-helmet-async": "^1.2.3",
     "react-inlinesvg": "^2.3.0",
-    "react-native-sound": "^0.11.2",
+    "react-native-sound": "^0.8.3",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
     "react-transition-group": "^4.4.2",

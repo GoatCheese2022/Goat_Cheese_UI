@@ -5,7 +5,7 @@ import { setAppOptions } from 'actions';
 import { AppState } from 'types';
 
 export const appState: AppState = {
-  query: 'react',
+  query: 'U878776',
 };
 
 export default {
