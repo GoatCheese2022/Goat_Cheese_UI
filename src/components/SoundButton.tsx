@@ -3,11 +3,13 @@ import Icon from "components/Icon";
 import {Button} from "styled-minimal";
 
 interface props {
-  url?: string
+  audioFile?: string
 }
+
 
 const playSound = (url: string | undefined) => {
   if (url) {
+    url = "https://assets.coderrocketfuel.com/pomodoro-times-up.mp3";
     let audio = new Audio(url);
     audio.play();
   }
@@ -19,7 +21,7 @@ const playSound = (url: string | undefined) => {
 export default function SoundButton(props: props) {
   return (
     <Button
-      onClick={() => playSound(props.url)}
+      onClick={() => playSound(props.audioFile)}
     >
       <Icon name="bell"/>
     </Button>

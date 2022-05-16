@@ -13,6 +13,7 @@ import { login } from 'actions';
 import Background from 'components/Background';
 import Icon from 'components/Icon';
 import Logo from 'components/Logo';
+import styles from "css/Login.module.css";
 
 import { RootState } from 'types';
 
@@ -74,17 +75,18 @@ function Home() {
         <Header>
           <Logo />
         </Header>
-        <Heading>{name}</Heading>
-        <Form className="loginForm" onSubmit={handleSubmit()}>
+        <Heading className={styles.heading}>{name}</Heading>
+        {/*<Form className="loginForm" onSubmit={handleSubmit()}>*/}
+        <Form className={styles.formStyle}  onSubmit={handleSubmit()}>
           <Label>
             Username:
-            <Input type="text" name="username" placeholder="username"/>
+            <Input className={styles.loginBoxes} type="text" name="username" placeholder="Enter Username"/>
           </Label>
           <Label>
             Password:
-            <Input type="password" name="password" placeholder="password" />
+            <Input className={styles.loginBoxes} type="password" name="password" placeholder="Enter Password" />
           </Label>
-          <Button
+          <Button className={styles.loginButton}
             busy={status === STATUS.RUNNING}
             data-testid="Login"
             onClick={handleClickLogin}

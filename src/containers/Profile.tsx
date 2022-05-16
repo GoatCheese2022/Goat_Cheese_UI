@@ -199,13 +199,12 @@ function Profile() {
     <article className={styles.article}>
       <img className={styles.image} src={profileImage} alt="profile"></img>
       <h1 className={styles.welcome}>{empFirstLast}</h1>
-      <form><input className={styles.search} type={"text"} id={empName} name={empName}
-                   placeholder={"Search by ID"} onChange={handleClick}
-      />
+      <form>
+        <input className={styles.search} type={"text"} id={empName} name={empName} placeholder={"Search by ID"} onChange={handleClick}/>
       </form>
       <h1 className={styles.empName}>{empName}</h1>
       <td className={styles.legalName}>{empName}</td>
-      <SoundButton></SoundButton>
+      <SoundButton audioFile={audio}></SoundButton>
       <td className={styles.workPhone}>{workPhone}</td>
       <a className={styles.email}>{email}</a>
       <td className={styles.mac}>{mac}</td>
