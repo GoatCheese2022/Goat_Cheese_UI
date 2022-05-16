@@ -4,12 +4,10 @@ import { useDispatch } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { selectUser } from 'selectors';
 import styled from 'styled-components';
-// import styled, { ThemeProvider } from 'styled-components';
 import { px } from 'styled-minimal';
 import useTreeChanges from 'tree-changes-hook';
 
 import { useAppSelector } from 'modules/hooks';
-// import theme, { headerHeight } from 'modules/theme';
 import { headerHeight } from 'modules/theme';
 
 import { name } from 'config';
@@ -96,7 +94,6 @@ function Root() {
           <Footer />
           <SystemAlerts />
         </AppWrapper>
-      {/*</ThemeProvider>*/}
     </BrowserRouter>
   );
 }

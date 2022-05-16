@@ -1,0 +1,25 @@
+.formStyle {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  background-color: #cb5b5b;
+  border-style: outset;
+  border-color: #cb5b5b;
+  padding: 8px;
+}
+
+.loginBoxes {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: lighter;
+  font-size: smaller;
+  color: #444443;
+  background-color: #cb5b5b;
+  border-style: none;
+}
+
+.loginButton {
+  background-color: #cb5b5b;
+}
+
+.heading {
+  color: #cb5b5b;
+}
