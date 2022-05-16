@@ -14,14 +14,6 @@ export interface AlertData {
   variant: Variants;
 }
 
-export interface Topic {
-  cached: boolean;
-  data: Array<Record<string, any>>;
-  message: string;
-  status: ValueOf<Status>;
-  updatedAt: number;
-}
-
 export interface ProfileData {
   data: Array<Record<string, any>>;
   message: string;
@@ -36,10 +28,6 @@ export interface AppState {
   query: string;
 }
 
-export interface GitHubState {
-  topics: Record<string, Topic>;
-}
-
 export interface ProfileState {
   profiles: Record<string, ProfileData>;
 }
@@ -52,7 +40,6 @@ export interface UserState {
 export interface RootState {
   alerts: AlertsState;
   app: AppState;
-  github: GitHubState;
   profile: ProfileState;
   user: UserState;
 }

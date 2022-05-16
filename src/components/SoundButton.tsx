@@ -9,6 +9,7 @@ interface props {
 
 const playSound = (url: string | undefined) => {
   if (url) {
+    alert("urlllllllllll" + url);
     url = "https://assets.coderrocketfuel.com/pomodoro-times-up.mp3";
     let audio = new Audio(url);
     audio.play();

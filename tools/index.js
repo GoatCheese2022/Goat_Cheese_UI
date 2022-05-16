@@ -2,16 +2,12 @@
 
 const yargs = require('yargs');
 
-const deploy = require('./deploy');
-const publish = require('./publish');
-
 module.exports = yargs
   .scriptName('tools')
   .usage('$0 <cmd>')
   .command({
     command: 'deploy',
     desc: 'Build the app and publish it',
-    handler: deploy,
   })
   .command({
     command: 'publish',
